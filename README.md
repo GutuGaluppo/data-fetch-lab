@@ -1,36 +1,159 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Data Fetch Lab
 
-## Getting Started
+A practical laboratory for studying and comparing modern data fetching strategies in React and Next.js.
 
-First, run the development server:
+## 🎯 Goals
+
+This repository explores different approaches to data fetching, caching, and synchronization in modern React applications.
+
+It is designed to be:
+
+- educational
+- practical
+- extensible
+- contributor-friendly
+
+---
+
+## 🧱 Tech Stack
+
+- Next.js (App Router)
+- React
+- TypeScript
+- Fetch API
+- Axios
+- TanStack Query
+- SWR
+- Zod
+- MSW (Mock Service Worker)
+
+---
+
+## 📚 Techniques Covered
+
+### Fundamentals
+
+- Basic fetch
+- Async/Await
+- Error handling
+- Loading states
+- AbortController
+
+### Intermediate
+
+- Parallel requests
+- Dependent requests
+- Polling
+- Retry logic
+- Request deduplication
+
+### Advanced (React & Next.js)
+
+- Server Components fetching
+- Streaming & Suspense
+- Incremental Static Regeneration (ISR)
+- Edge runtime fetching
+
+### Libraries
+
+- Axios
+- SWR
+- TanStack Query
+- ky
+
+---
+
+## 🧪 Running the Project
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📁 Examples
 
-## Learn More
+Each route demonstrates a specific fetching strategy:
 
-To learn more about Next.js, take a look at the following resources:
+/fetch-basic
+/abort-controller
+/parallel-fetch
+/server-components
+/swr
+/react-query
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+data-fetch-lab/
+│
+├── public/
+│
+├── src/
+│ ├── app/
+│ │ ├── layout.tsx
+│ │ ├── page.tsx
+│ │ ├── providers.tsx
+│ │ └── (examples)/
+│ │ ├── fetch-basic/
+│ │ ├── async-await/
+│ │ ├── abort-controller/
+│ │ ├── axios/
+│ │ ├── parallel-fetch/
+│ │ ├── dependent-fetch/
+│ │ ├── suspense/
+│ │ ├── server-components/
+│ │ ├── streaming/
+│ │ └── react-query/ ← futuramente
+│ │
+│ ├── components/
+│ │ ├── ui/
+│ │ │ ├── Loader.tsx
+│ │ │ ├── ErrorMessage.tsx
+│ │ │ └── Container.tsx
+│ │ └── product/
+│ │ ├── ProductCard.tsx
+│ │ └── ProductList.tsx
+│ │
+│ ├── hooks/
+│ │ ├── fetch/
+│ │ │ ├── useFetch.ts
+│ │ │ ├── useAbortableFetch.ts
+│ │ │ ├── usePolling.ts
+│ │ │ └── useParallelFetch.ts
+│ │ └── react-query/
+│ │ └── useProductsQuery.ts
+│ │
+│ ├── lib/
+│ │ ├── api/
+│ │ │ ├── client.ts
+│ │ │ ├── endpoints.ts
+│ │ │ └── fetcher.ts
+│ │ │
+│ │ ├── axios/
+│ │ │ └── axiosInstance.ts
+│ │ │
+│ │ └── utils/
+│ │ ├── sleep.ts
+│ │ └── logger.ts
+│ │
+│ ├── types/
+│ │ ├── product.ts
+│ │ └── api.ts
+│ │
+│ ├── mocks/
+│ │ ├── handlers.ts
+│ │ └── browser.ts
+│ │
+│ ├── constants/
+│ │ └── routes.ts
+│ │
+│ └── styles/
+│
+├── .env.example
+├── README.md
+└── package.json
