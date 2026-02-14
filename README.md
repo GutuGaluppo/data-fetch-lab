@@ -89,6 +89,7 @@ Each route demonstrates a specific fetching strategy:
 
 Contributions are welcome!
 
+```
 data-fetch-lab/
 │
 ├── public/
@@ -157,3 +158,4 @@ data-fetch-lab/
 ├── .env.example
 ├── README.md
 └── package.json
+```
